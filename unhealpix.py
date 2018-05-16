@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 
-from astropy.wcs import WCS
 from astropy.io import fits
-from astropy.utils.data import get_pkg_data_filename
 from reproject import reproject_from_healpix, reproject_to_healpix
 import sys
 
