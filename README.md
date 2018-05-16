@@ -4,18 +4,18 @@ Regrid a HEALPIX FITS file to target FITS image.
 
 ## Description
 
-A simple implementation of [Astropy](http://www.astropy.org/) and [reproject](https://reproject.readthedocs.io/) FITS handling. This script reprojects a HEALPIX projected FITS file to an image projection. Beware of any projection issues this may cause!
+A simple implementation of [Astropy](http://www.astropy.org/) and [Reproject](https://reproject.readthedocs.io/) FITS handling. This script reprojects a HEALPIX projected FITS file to an image projection. Beware of any projection issues this may cause!
 
 ## Getting Started
 
 ### Dependencies
 Required libraries:
 * [Astropy](http://www.astropy.org/)
-* [reproject](https://reproject.readthedocs.io/)
+* [Reproject](https://reproject.readthedocs.io/)
 
 ### Installing
 
-* Simply clone to whever you'd prefer
+* Simply clone to wherever you'd prefer
 * Any modifications needed to be made to files/folders
 
 ### Executing program
