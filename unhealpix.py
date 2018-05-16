@@ -31,7 +31,7 @@ CDELT2  =
 
 # Copy target information
 for i in target_header:
-    target_header[i] = hdu1.header[str(i)]
+    target_header[i] = hdu1.header[i]
 
 # Force the axes to be 2D
 target_header['NAXIS'] = 2
