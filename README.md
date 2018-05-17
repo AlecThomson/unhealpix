@@ -16,7 +16,6 @@ Required libraries:
 ### Installing
 
 * Simply clone to wherever you'd prefer
-* Any modifications needed to be made to files/folders
 
 ### Executing program
 Example usage:
