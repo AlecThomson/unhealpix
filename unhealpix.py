@@ -36,9 +36,10 @@ for i in target_header:
 # Force the axes to be 2D
 target_header['NAXIS'] = 2
 
+hdu2.header['COORDSYS'] = 'galactic'
 # Regrid
 print 'Regridding...'
-array, footprint = reproject_from_healpix(hdu2, target_header)
+array, footprint = reproject_from_healpix(hdu2, target_header, field = 0)
 
 # Save the file!
 
