@@ -23,11 +23,11 @@ parser.add_argument("template", metavar="template.fits", nargs=1,
 parser.add_argument("out", metavar="output.fits", nargs=1,
                     help="FITS map to save output to.")
 parser.add_argument("-e", dest="Extension", default=1,
-                    help="Extension to select from HEALPIX file.")
+                    help="Extension to select from HEALPIX file. Default 1.")
 parser.add_argument("-f", dest="field", default=0,
-                    help="Select field within extension.")
+                    help="Select field within extension. Default 0.")
 parser.add_argument("-c", dest="COORDSYS", default='galactic',
-                    help="Specify COORDSYS card.")
+                    help="Specify COORDSYS card. Default 'galactic'.")
 args = parser.parse_args()
 
 
