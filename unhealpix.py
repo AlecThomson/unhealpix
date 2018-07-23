@@ -34,7 +34,7 @@ args = parser.parse_args()
 print 'Reading files...'
 # Read in HEALPIX file
 outf = args.fitsHEAL[0]
-hdu2 = fits.open(outf)[args.Extension]
+hdu2 = fits.open(outf)[int(args.Extension)]
 
 # Read in target fits file
 inf = args.template[0]
