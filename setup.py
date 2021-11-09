@@ -18,7 +18,7 @@ URL = 'https://github.com/AlecThomson/unhealpix'
 EMAIL = 'alec.thomson@csiro.au'
 AUTHOR = 'Alec Thomson'
 REQUIRES_PYTHON = '>=3.6.0'
-VERSION = '1.0.1'
+VERSION = '1.0.2'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
@@ -108,7 +108,7 @@ setup(
     py_modules=['unhealpix'],
 
     entry_points={
-        'console_scripts': ['unhealpix=unhealix:cli'],
+        'console_scripts': ['unhealpix=unhealpix:cli'],
     },
     install_requires=REQUIRED,
     extras_require=EXTRAS,
