@@ -107,9 +107,9 @@ setup(
     # If your package is a single module, use this instead of 'packages':
     py_modules=['unhealpix'],
 
-    # entry_points={
-    #     'console_scripts': ['mycli=mymodule:cli'],
-    # },
+    entry_points={
+        'console_scripts': ['unhealpix=unhealix:cli'],
+    },
     install_requires=REQUIRED,
     extras_require=EXTRAS,
     include_package_data=True,
