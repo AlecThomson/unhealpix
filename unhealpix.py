@@ -59,7 +59,17 @@ def cli():
     )
 
 
-def main(outf, inf, outf1, ext, field, coordsys):
+def main(outf: str, inf: str, outf1: str, ext: int, field: int, coordsys: str) -> None:
+    """Main script.
+
+    Args:
+        outf (str): Healpix file
+        inf (str): Target file
+        outf1 (str): Output file
+        ext (int): Healpix extension
+        field (int): Column from healpix file.
+        coordsys (str): Coordsys to use.
+    """    
     # Read in the HEALPIX file
     print("Reading files...")
     # Read in HEALPIX file
@@ -71,31 +81,10 @@ def main(outf, inf, outf1, ext, field, coordsys):
     print("Generating header...")
     target_wcs = WCS(hdu1)
     target_header = target_wcs.celestial.to_header()
-    # Generate a simple FITS header
-    # target_header = fits.Header.fromstring("""NAXIS   =
-    # NAXIS1  =
-    # NAXIS2  =
-    # CTYPE1  =
-    # CRPIX1  =
-    # CRVAL1  =
-    # CDELT1  =
-    # CTYPE2  =
-    # CRPIX2  =
-    # CRVAL2  =
-    # CDELT2  =
-    # """, sep='\n')
-
-    # Copy target information
-    for i in target_header:
-        target_header[i] = hdu1.header[i]
-
-    # Force the axes to be 2D
-    # target_header["NAXIS"] = 2
-
     hdu2.header["COORDSYS"] = coordsys
     # Regrid
     print("Regridding...")
-    array, footprint = reproject_from_healpix(hdu2, target_header, field=int(field))
+    array, footprint = reproject_from_healpix(hdu2, target_header, field=int(field), shape_out=target_wcs.celestial.array_shape)
 
     # Save the file!
     print("Saving output to " + outf1)
